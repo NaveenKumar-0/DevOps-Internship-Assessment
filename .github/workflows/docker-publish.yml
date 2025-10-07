@@ -21,7 +21,8 @@ jobs:
           password: ${{ secrets.GHCR_PAT }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/my-nextjs-app:latest ./my-nextjs-app
+        run: docker build -t ghcr.io/naveenkumar-0/my-nextjs-app:latest ./my-nextjs-app
 
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/my-nextjs-app:latest
+        run: docker push ghcr.io/naveenkumar-0/my-nextjs-app:latest
+
