@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nextjs
+  name: nextjs-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nextjs
+  template:
+    metadata:
+      labels:
+        app: nextjs
+    spec:
+      containers:
+      - name: cont1
+        image: ghcr.io/naveenkumar-0/my-nextjs-app:latest
+        ports:
+          - containerPort: 80
