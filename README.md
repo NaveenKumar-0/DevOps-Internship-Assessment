@@ -84,5 +84,7 @@ NOTE: NodePort service is only accessible from the EC2 instance.
 To access it externally (your local browser):
 
 1. Use SSH port forwarding:
+   
    ssh -i your-key.pem -L 31111:<minikube-ip>:31111 ec2-user@<EC2-public-IP>
+   
    Then open http://localhost:31111
