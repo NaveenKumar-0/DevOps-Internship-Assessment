@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: nextjs-deploy
   labels:
     app: nextjs
-  name: nextjs-deploy
 spec:
   replicas: 3
   selector:
@@ -15,7 +15,19 @@ spec:
         app: nextjs
     spec:
       containers:
-      - name: cont1
+      - name: nextjs
         image: ghcr.io/naveenkumar-0/my-nextjs-app:latest
         ports:
-          - containerPort: 80
+          - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
