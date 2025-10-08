@@ -4,12 +4,12 @@ Project Overview:
 
  --> Containerized a Next.js app, automated build and push to GitHub Container Registry (GHCR) using GitHub Actions, and deployed it to Kubernetes (Minikube).
 
-Setup Instructions:
-...................
+**Setup Instructions:
+...................**
 
 SERVER REQUIREMENTS: 2 CPUs or more, 2GB of free memory, 20GB of free disk space
 
-Install Minikube:
+**Install Minikube:**
 
 --> Clone this repo -> https://github.com/NaveenKumar-0/installlation-scripts.git 
       CMD - git clone https://github.com/NaveenKumar-0/installlation-scripts.git 
@@ -31,7 +31,7 @@ NOTE:  ( you can use your own minikube installation script )
       Kubernetes control plane is running at https://192.168.49.2:8443
       CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
-NEXT: Deploy Application
+**NEXT: Deploy Application**
 
 --> Clone the repo:
       CMD - git clone https://github.com/NaveenKumar-0/DevOps-Internship-Assessment.git
@@ -51,7 +51,7 @@ NEXT: Deploy Application
 --> Get NodePort of service:
       CMD - kubectl get svc
 
-NEXT:
+**NEXT:**
 
 --> CMD - minikube service nextjs-service ( Should get output like below )
 
@@ -63,11 +63,15 @@ NEXT:
 * Opening service default/nextjs-service in default browser...
   http://192.168.49.2:31111
 
+
+**--> CMD - curl http://192.168.49.2:31111  ----> WILL GET HTML OUTPUT.
+**
+
+**OR**
+
 --> Open in browser:
 http://<minikube-ip>:<node-port>
 Example: http://192.168.49.2:31111
-
---> CMD - curl http://192.168.49.2:31111  ----> WILL GET HTML OUTPUT.
 
 NOTE: NodePort service is only accessible from the EC2 instance. 
 To access it externally (your local browser):
