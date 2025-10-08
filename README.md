@@ -67,11 +67,6 @@ NOTE:  ( you can use your own minikube installation script )
 
 --> CMD - minikube service nextjs-service  ( Should get output like below )
 
-┌───────────┬────────────────┬─────────────┬───────────────────────────┐
-│ NAMESPACE │      NAME      │ TARGET PORT │            URL            │
-├───────────┼────────────────┼─────────────┼───────────────────────────┤
-│ default   │ nextjs-service │ 3000        │ http://192.168.49.2:31111 │
-└───────────┴────────────────┴─────────────┴───────────────────────────┘
 * Opening service default/nextjs-service in default browser...
   http://192.168.49.2:31111
 
