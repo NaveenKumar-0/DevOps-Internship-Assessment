@@ -11,21 +11,27 @@ SERVER REQUIREMENTS: 2 CPUs or more, 2GB of free memory, 20GB of free disk space
 
 **Install Minikube:**
 
---> Clone this repo -> https://github.com/NaveenKumar-0/installlation-scripts.git 
-      CMD - git clone https://github.com/NaveenKumar-0/installlation-scripts.git 
+--> Clone this repo -> https://github.com/NaveenKumar-0/installlation-scripts.git
+
+      CMD - git clone https://github.com/NaveenKumar-0/installlation-scripts.git
+      
       CMD - cd installation-scripts
+      
       CMD -  sh ubuntu-minikube.sh
 
 NOTE:  ( you can use your own minikube installation script )
  _`````````````````````````````````````````````````````````````
 
---> Check the minikube status: 
+--> Check the minikube status:
+
       CMD - minikube status
 
---> Start Minikube (if not running): 
+--> Start Minikube (if not running):
+
       CMD - minikube start
 
 --> Verify cluster:
+
       CMD - kubectl cluster-info ( should get cluster info like below )
       
       Kubernetes control plane is running at https://192.168.49.2:8443
@@ -34,26 +40,32 @@ NOTE:  ( you can use your own minikube installation script )
 **NEXT: Deploy Application**
 
 --> Clone the repo:
+
       CMD - git clone https://github.com/NaveenKumar-0/DevOps-Internship-Assessment.git
+      
       CMD - cd DevOps-Internship-Assessment
 
 --> Running manifest files ( deployement.yaml and service.yaml )
+
       CMD - kubectl apply -f k8s/
 
 
 --> Check pods and services:
+
       CMD - kubectl get pods
       CMD - kubectl get svc
 
 --> Get Minikube IP:
+
       CMD - minikube ip
 
 --> Get NodePort of service:
+
       CMD - kubectl get svc
 
 **NEXT:**
 
---> CMD - minikube service nextjs-service ( Should get output like below )
+--> CMD - minikube service nextjs-service  ( Should get output like below )
 
 ┌───────────┬────────────────┬─────────────┬───────────────────────────┐
 │ NAMESPACE │      NAME      │ TARGET PORT │            URL            │
